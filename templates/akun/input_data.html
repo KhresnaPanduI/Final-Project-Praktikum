@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+
+    <title>Donasi Kesehatan</title>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/png">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{% static 'css/templatemo-digital-trend.css' %}">
+
+</head>
+<body>
+
+<!-- MENU BAR -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <img src="{% static 'images/logo.png' %}"
+                 style="width: 80px; height: 80px; object-fit: contain; object-position: center center;">
+            Donasi Kesehatan
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="{% url 'home' %}#about" class="nav-link smoothScroll">Tentang Kami</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'home' %}#project" class="nav-link smoothScroll">Donasi</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'home' %}#ourMission" class="nav-link smoothScroll">Misi Kami</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'akun:apd' %}" class="nav-link smoothScroll">Input Data APD</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'akun:login' %}" class="nav-link contact">Login/Sign up</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Daftar Instasi Kesehatan -->
+<section class="contact section-padding">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 mx-auto col-md-7 col-12 py-5 mt-5 text-center" data-aos="fade-up">
+                <h1 class="mb-4"><strong>Input Data APD</strong></h1>
+            </div>
+
+            <div class="col-lg-8 mx-auto col-md-10 col-12">
+                <form action="#" method="POST" class="contact-form" data-aos="fade-up" data-aos-delay="300" role="form">
+                    {% csrf_token %}
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12">Masker medis
+                            <input type="number" class="form-control" name="masker_medis" placeholder="Masker Medis">
+                        </div>
+
+                        <div class="col-lg-12 col-12">Masker n95
+                            <input type="number" class="form-control" name="masker_n95" placeholder="Masker n95">
+                        </div>
+
+                         <div class="col-lg-12 col-12">Hazmat
+                            <input type="number" class="form-control" name="hazmat" placeholder="Hazmat" >
+                        </div>
+
+                        <div class="col-lg-12 col-12">Apron
+                            <input type="number" class="form-control" name="apron" placeholder="Apron" >
+                        </div>
+
+                        <div class="col-lg-12 col-12">Hand sanitizer
+                            <input type="number" class="form-control" name="hand_sanitizer placeholder="Hand sanitizer" >
+                        </div>
+
+                        <div class="col-lg-12 col-12">Sarung tangan
+                            <input type="number" class="form-control" name="sarung_tangan" placeholder="Sarung tangan" >
+                        </div>
+
+                        <div class="col-lg-12 col-12">Face shield
+                            <input type="number" class="form-control" name="face_shield" placeholder="Face shield" >
+                        </div>
+
+                        <div class="col-lg-12 col-12">Sepatu boots
+                            <input type="number" class="form-control" name="sepatu_boots" placeholder="Hazmat" >
+                        </div>
+
+                        <div class="col-lg-5 mx-auto col-7">
+                            <button type="submit" class="form-control" id="submit-button" name="submit">Submit
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-5 mx-lg-auto col-md-8 col-10">
+                <h1 class="text-white" data-aos="fade-up" data-aos-delay="100">We saves <strong> peoples </strong>
+                    lifes.</h1>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+                <h4 class="my-4">Contact Info</h4>
+
+                <p class="mb-1">
+                    <i class="fa fa-phone mr-2 footer-icon"></i>
+                    +6221 111 222
+                </p>
+
+                <p>
+                    <a href="#">
+                        <i class="fa fa-envelope mr-2 footer-icon"></i>
+                        hello@dokes.com
+                    </a>
+                </p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
+                <h4 class="my-4">Our Address</h4>
+
+                <p class="mb-1">
+                    <i class="fa fa-home mr-2 footer-icon"></i>
+                    Jl. Magelang KM 9, Jl. Gito Gati No.18, Tridadi, Kec. Sleman, Kabupaten Sleman, Daerah Istimewa
+                    Yogyakarta 55511
+                </p>
+            </div>
+
+            <div class="col-lg-4 mx-lg-auto text-center col-md-8 col-12" data-aos="fade-up" data-aos-delay="400">
+                <p class="copyright-text">Copyright &copy; 2020 Donasi Kesehatan</p>
+            </div>
+
+            <div class="col-lg-4 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
+
+                <ul class="footer-link">
+                    <li><a href="#">Stories</a></li>
+                    <li><a href="#">Work with us</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+                <ul class="social-icon">
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-dribbble"></a></li>
+                    <li><a href="#" class="fa fa-behance"></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+
+<!-- SCRIPTS -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/aos.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+</html>
